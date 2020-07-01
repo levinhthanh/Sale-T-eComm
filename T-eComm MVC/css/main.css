@@ -1,0 +1,21 @@
+.main{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 1vw;
+}
+
+.selections{
+    width: 15%;
+    background-color: blanchedalmond;
+}
+
+.show_products{
+    width: 70%;
+    background-color: cadetblue;
+}
+
+.advertise{
+    width: 15%;
+    background-color: chartreuse;
+}
