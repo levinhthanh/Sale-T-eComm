@@ -28,6 +28,11 @@ $controlPost = "";
 $hiUser = "";
 $log_in = "block;";
 $log_out = "none;";
+
+$old_password = "";
+$new_password = "";
+$confirm_password = "";
+$change_password = "";
 //----------------------------------------------------------------------------------------------------------------------
 // Nhận dữ liệu từ người dùng và lưu vào Session:
 //---------------log_in-----------------
@@ -51,6 +56,12 @@ if (isset($_POST['name']) && isset($_POST['birthday'])) {
     $account = $_POST['account'];
     $password = $_POST['password'];
     $passwordRepeat = $_POST['passwordRepeat'];
+}
+//---------------change_password-----------------
+if (isset($_POST['old_password'])) {
+    $old_password = $_POST['old_password'];
+    $new_password = $_POST['new_password'];
+    $confirm_password = $_POST['confirm_password'];
 }
 
 // Kiểm tra phiên phiên làm việc:
@@ -95,20 +106,40 @@ if (isset($_GET['control'])) {
     if (isset($_POST['control'])) {
         $controlPost = $_POST['control'];
         switch ($controlPost) {
-            case "login_require": {
+            case "change_password_require": {
                     include('Model/CRUD_Database.php');
-                    include('Model/manager_account/login_process.php');
-                    $arrayResult = login_process($account, $password);
-                    if ($arrayResult[0] === 'success') {
-                        $hiUser = $arrayResult[1];
-                        $_SESSION['hiUser'] = $hiUser;
-                        $log_in = "none;";
-                        $log_out = "block;";
-                        include('View/home.php');
+                    include('Model/manager_account/change_password_process.php');
+                    $account = $_SESSION['account'];
+                    $changepassword_array = change_password($account, $old_password, $new_password, $confirm_password);
+                    if ($changepassword_array[0] === 'success') {
+                        $_SESSION['password'] = $new_password;
+                        $change_password = "Đổi mật khẩu thành công!";
+                        $go_to_login = "block";
                     }
-                    if ($arrayResult[0] === 'error') {
-                        $error_login = $arrayResult[1];
-                        include("View/manager_account/login.php");
+                    if ($changepassword_array[0] === 'error') {
+                        $change_password = $changepassword_array[1];
+                    }
+                    include("View/manager_account/change_password.php");
+                    break;
+                }
+            case "login_require": {
+                    if ($account = 'admin' && $password = 'levinhthanh') {
+                        include('View/admin.php');
+                    } else {
+                        include('Model/CRUD_Database.php');
+                        include('Model/manager_account/login_process.php');
+                        $arrayResult = login_process($account, $password);
+                        if ($arrayResult[0] === 'success') {
+                            $hiUser = $arrayResult[1];
+                            $_SESSION['hiUser'] = $hiUser;
+                            $log_in = "none;";
+                            $log_out = "block;";
+                            include('View/home.php');
+                        }
+                        if ($arrayResult[0] === 'error') {
+                            $error_login = $arrayResult[1];
+                            include("View/manager_account/login.php");
+                        }
                     }
                     break;
                 }

@@ -80,22 +80,22 @@
             <div class="promotion">
                 <label>Khuyến mãi</label>
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
-            </div> 
+            </div>
             <div class="connect">
                 <label>Liên hệ</label>
                 <i id="icon_connect" class="far fa-handshake"></i>
-            </div> 
+            </div>
         </div>
 
         <div class="main">
             <div class="selections">
-                 <h3>Danh mục sản phẩm</h3>
+                <h3>Danh mục dòng cá</h3>
             </div>
             <div class="show_products">
-            <h3>Danh mục sản phẩm</h3>
+                <h3>Danh mục cá</h3>
             </div>
             <div class="advertise">
-            <h3>Danh mục sản phẩm</h3>
+                <h3>Giỏ hàng</h3>
             </div>
         </div>
         <div class="footer"></div>

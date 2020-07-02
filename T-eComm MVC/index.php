@@ -1,5 +1,7 @@
 <?php
 
-include('Controller/Controller.php');
+include('Controller/Router.php');
+
+
 
 ?>

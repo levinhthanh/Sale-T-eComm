@@ -33,5 +33,10 @@ class CRUD_Database{
         $this->result = $this->connect->prepare("$sql");
         $this->result->execute($data);
     }
+    public function updateData($sql)
+    {
+        $this->result = $this->connect->prepare("$sql");
+        $this->result->execute();
+    }
 }
 ?>
