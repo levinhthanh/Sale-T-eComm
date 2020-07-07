@@ -10,6 +10,7 @@ include('Model/admin/validate_new_empoyee.php');
 include('Model/Employee.php');
 include('Model/admin/validate_new_product.php');
 include('Model/Product.php');
+include('Model/Comment.php');
 // Nhận dữ liệu
 include('Model/receive_data.php');
 // Chương trình

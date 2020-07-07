@@ -1,7 +1,21 @@
 <?php
 
+
+if(isset($_POST['product'])){
+    $product_code = $_POST['product'];
+    include('Model/product/product.php');
+    include('View/product/product.php');
+}
+
+
 if (isset($_GET['product'])) {
-    $product = $_GET['product'];
+    $product_code = $_GET['product'];
+    include('Model/product/product.php');
+    include('View/product/product.php');
+}
+
+if (isset($_GET['product_line'])) {
+    $product = $_GET['product_line'];
     switch ($product) {
         case 'rado': {
                 $view = 'rado';
@@ -11,7 +25,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'casio': {
+        case 'casio': {
                 $view = 'casio';
                 $line_title = 'ĐỒNG HỒ CASIO';
                 $products = Customer::watch_product_line($view);
@@ -19,7 +33,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'seiko': {
+        case 'seiko': {
                 $view = 'seiko';
                 $line_title = 'ĐỒNG HỒ SEIKO';
                 $products = Customer::watch_product_line($view);
@@ -27,7 +41,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'citizen': {
+        case 'citizen': {
                 $view = 'citizen';
                 $line_title = 'ĐỒNG HỒ CITIZEN';
                 $products = Customer::watch_product_line($view);
@@ -35,7 +49,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'apple_watch': {
+        case 'apple_watch': {
                 $view = 'apple_watch';
                 $line_title = 'ĐỒNG HỒ APPLE WATCH';
                 $products = Customer::watch_product_line($view);
@@ -43,7 +57,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'bulova': {
+        case 'bulova': {
                 $view = 'bulova';
                 $line_title = 'ĐỒNG HỒ BULOVA';
                 $products = Customer::watch_product_line($view);
@@ -51,7 +65,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'candino': {
+        case 'candino': {
                 $view = 'candino';
                 $line_title = 'ĐỒNG HỒ CANDINO';
                 $products = Customer::watch_product_line($view);
@@ -59,7 +73,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'claude_bernard': {
+        case 'claude_bernard': {
                 $view = 'claude_bernard';
                 $line_title = 'ĐỒNG HỒ CLAUDE BERNARD';
                 $products = Customer::watch_product_line($view);
@@ -67,7 +81,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'fossil': {
+        case 'fossil': {
                 $view = 'fossil';
                 $line_title = 'ĐỒNG HỒ FOSSIL';
                 $products = Customer::watch_product_line($view);
@@ -75,7 +89,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'orient': {
+        case 'orient': {
                 $view = 'orient';
                 $line_title = 'ĐỒNG HỒ ORIENT';
                 $products = Customer::watch_product_line($view);
@@ -83,7 +97,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'movado': {
+        case 'movado': {
                 $view = 'movado';
                 $line_title = 'ĐỒNG HỒ MOVADO';
                 $products = Customer::watch_product_line($view);
@@ -91,7 +105,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'police': {
+        case 'police': {
                 $view = 'police';
                 $line_title = 'ĐỒNG HỒ POLICE';
                 $products = Customer::watch_product_line($view);
@@ -99,7 +113,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'teintop': {
+        case 'teintop': {
                 $view = 'teintop';
                 $line_title = 'ĐỒNG HỒ TEINTOP';
                 $products = Customer::watch_product_line($view);
@@ -107,7 +121,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'rolex': {
+        case 'rolex': {
                 $view = 'rolex';
                 $line_title = 'ĐỒNG HỒ ROLEX';
                 $products = Customer::watch_product_line($view);
@@ -115,7 +129,7 @@ if (isset($_GET['product'])) {
                 include('View/product/product_line.php');
                 break;
             }
-            case 'omega': {
+        case 'omega': {
                 $view = 'omega';
                 $line_title = 'ĐỒNG HỒ OMEGA';
                 $products = Customer::watch_product_line($view);

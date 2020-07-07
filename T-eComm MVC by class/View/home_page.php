@@ -91,21 +91,21 @@
         <div class="main">
             <div class="selections">
                 <label id="lable_product_line">~ CÁC HÃNG ĐỒNG HỒ ~</label>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=rado">Rado</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=casio">Casio</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=seiko">Seiko</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=citizen">Citizen</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=apple_watch">Apple watch</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=bulova">Bulova</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=candino">Candino</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=claude_bernard">Claude Bernard</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=fossil">Fossil</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=orient">Orient</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=movado">Movado</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=police">Police</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=teintop">Teintop</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=rolex">Rolex</a>
-                <a id="watch_line" href="index.php?router=customer&control=watch_product&product=omega">Omega</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=rado">Rado</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=casio">Casio</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=seiko">Seiko</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=citizen">Citizen</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=apple_watch">Apple watch</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=bulova">Bulova</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=candino">Candino</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=claude_bernard">Claude Bernard</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=fossil">Fossil</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=orient">Orient</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=movado">Movado</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=police">Police</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=teintop">Teintop</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=rolex">Rolex</a>
+                <a id="watch_line" href="index.php?router=customer&control=watch_product&product_line=omega">Omega</a>
 
             </div>
             <div class="show_products">

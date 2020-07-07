@@ -28,7 +28,7 @@ foreach ($data_products as $key => $value) {
     <input type='hidden' name='control' value='add_to_box'>
     <input type='hidden' name='product_code' value=".$product_code[$i].">
     <img id='image_product_show' src=".$product_image[$i][0].">
-    <a id='name_product_show' href=''>".$product_name[$i]."</a>
+    <a id='name_product_show' href='index.php?router=customer&control=watch_product&product=". $product_code[$i]."'>".$product_name[$i]."</a>
     <label id='price_product_show'>".$product_price_sale[$i]."đ</label>
     <button id='button_product_show'>Thêm vào giỏ hàng</button></form>";
     $i++;

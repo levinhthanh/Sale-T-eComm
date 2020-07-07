@@ -34,6 +34,10 @@ if (isset($_GET['control'])) {
 if (isset($_POST['control'])) {
     $control = $_POST['control'];
     switch ($control) {
+        case "require_add_comment":{
+            include('Controller/Control_product.php');
+            break;
+        }
         case "require_get_password": {
 
                 break;

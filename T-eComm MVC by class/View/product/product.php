@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/product/one_product.css">
 </head>
 
 <body>
@@ -109,9 +110,55 @@
 
             </div>
             <div class="show_products">
-                <label id="lable_product_list">~ <?=$line_title?> ~</label>
-                <div class="grid_products">
-                    <?= $show ?>
+                <label id="lable_product_list" style="font-style: italic;">Chi tiết sản phẩm</label>
+                <div class="one_product">
+                    <div class="one_product_left">
+                        <div class="slide_one_product">
+                            <img class="img_slide" src="<?= $product_image1 ?>">
+                            <img class="img_slide" src="<?= $product_image2 ?>">
+                            <img class="img_slide" src="<?= $product_image3 ?>">
+                            <button class="button_one_product_left" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="button_one_product_right" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <div class="one_product_right">
+                        <label id="one_product_name"><?= $one_product_name ?></label>
+                        <div class="one_product_price_sale">
+                            <label id="price_sale_title">Giá sản phẩm:</label>
+                            <label id="price_sale_title"><?= $one_product_price_sale ?>đ</label>
+                        </div>
+                        <div class="hot_new">
+                            <img id="hot_lable" src="images/hot.gif" style="display: <?= $display_hot ?>;">
+                            <img id="new_lable" src="images/new.gif" style="display: <?= $display_new ?>;">
+                        </div>
+                        <form action="" method="post">
+                            <button id="btn_buy_product">MUA NGAY</button>
+                        </form>
+                        <form action="" method="post">
+                            <button id="btn_advisory">LIÊN HỆ ĐỂ ĐƯỢC TƯ VẤN</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="comments">
+                    <div class="comment_out">
+                        <div id="comment_title">Đánh giá của khách hàng:</div>
+                        <div class="content_comment">
+                           <?=$show_comments?>
+                        </div>
+                    </div>
+                    <div class="comment_in">
+                        <div id="comment_title">Bình luận của bạn:</div>
+                        <form class="new_comment" action="index.php" method="post">
+                            <input type="hidden" name="router" value="customer">
+                            <input type="hidden" name="control" value="require_add_comment">
+                            <input type="hidden" name="product" value="<?=$product_code?>">
+                            <textarea id="comment_content" name="comment_content" cols="50" rows="10" placeholder="Nội dung bình luận"></textarea><br>
+                            <a style="display:<?= $login_to_comment ?>;" id="login_to_comment" href="index.php?control=login">Bạn cần đăng nhập để bình luận!</a>
+                            <label style="display:<?= $comment_success ?>;" id="comment_success">Bạn đã bình luận thành công!</label>
+                            <input id="button_add_comment" type="submit"><br>
+
+                        </form>
+                    </div>
                 </div>
             </div>
 

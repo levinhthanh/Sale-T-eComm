@@ -27,6 +27,14 @@ class Product
         $this->product_is_new = $is_new;
     }
 
+    public static function get_product($product_code){
+        $one_product_info = new CRUD_Database;
+        $one_product_info->connect();
+        $sql = "SELECT * FROM products WHERE product_code = '$product_code'";
+        $product_info = $one_product_info->executeOne($sql);
+        return $product_info;
+    }
+
     public function add_product()
     {
         $name = $this->product_name;
