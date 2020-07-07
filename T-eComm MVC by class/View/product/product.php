@@ -72,11 +72,11 @@
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="product_new">
-                <label id="label_tool">SẢN PHẨM MỚI</label>
+                <a id="label_tool" href="index.php?router=customer&control=new_product_list">SẢN PHẨM MỚI</a>
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="product_hot">
-                <label id="label_tool">SẢN PHẨM HOT</label>
+                <a id="label_tool" href="index.php?router=customer&control=hot_product_list">SẢN PHẨM HOT</a>
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="promotion">

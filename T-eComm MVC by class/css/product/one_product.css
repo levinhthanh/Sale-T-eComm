@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     padding: 1.5vw;
-    height: 40vw;
+    height: 35vw;
 }
 .one_product_left{
     width: 40%;
@@ -10,12 +10,15 @@
 .slide_one_product{
     position: relative;
     width: 100%;
-    height: 46.5vw;
+    border: solid 0.2px darkgray;
   }
 .img_slide{
     display: none;
     width: 100%;
     
+}
+.img_slide:hover{
+    transform: scale(1.5);
 }
 .button_one_product_left{
     width: 1.5vw;
@@ -82,7 +85,7 @@
 }
 #new_lable{
     width: 15%;
-    margin-left: 3vw;
+    margin-left: 2vw;
 }
 .comments{
     width: 90%;

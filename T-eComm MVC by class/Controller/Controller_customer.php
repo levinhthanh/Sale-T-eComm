@@ -3,6 +3,16 @@
 if (isset($_GET['control'])) {
     $control = $_GET['control'];
     switch ($control) {
+        case 'new_product_list': {
+                include('Model/product/product_new.php');
+                include('View/product/product_new.php');
+                break;
+            }
+        case 'hot_product_list': {
+                include('Model/product/product_hot.php');
+                include('View/product/product_hot.php');
+                break;
+            }
         case 'watch_product': {
                 include('Controller/Control_product.php');
                 break;
@@ -34,10 +44,10 @@ if (isset($_GET['control'])) {
 if (isset($_POST['control'])) {
     $control = $_POST['control'];
     switch ($control) {
-        case "require_add_comment":{
-            include('Controller/Control_product.php');
-            break;
-        }
+        case "require_add_comment": {
+                include('Controller/Control_product.php');
+                break;
+            }
         case "require_get_password": {
 
                 break;

@@ -71,11 +71,11 @@
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="product_new">
-                <label id="label_tool">SẢN PHẨM MỚI</label>
+                <a id="label_tool" href="index.php?router=customer&control=new_product_list">SẢN PHẨM MỚI</a>
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="product_hot">
-                <label id="label_tool">SẢN PHẨM HOT</label>
+                <a id="label_tool" href="index.php?router=customer&control=hot_product_list">SẢN PHẨM HOT</a>
                 <i id="icon_dropdown" class="fas fa-angle-down"></i>
             </div>
             <div class="promotion">
@@ -113,15 +113,15 @@
                 <label id="lable_product_list">~ SẢN PHẨM MỚI ~</label>
 
                 <div class="grid_products">
-                    <div class="product_show"><?= $product[0] ?></div>
-                    <div class="product_show"><?= $product[1] ?></div>
-                    <div class="product_show"><?= $product[2] ?></div>
-                    <div class="product_show"><?= $product[3] ?></div>
-                    <div class="product_show"><?= $product[4] ?></div>
-                    <div class="product_show"><?= $product[5] ?></div>
-                    <div class="product_show"><?= $product[6] ?></div>
-                    <div class="product_show"><?= $product[7] ?></div>
-                    <div class="product_show"><?= $product[8] ?></div>
+                    <div class="product_show"><?= $product_new[0] ?></div>
+                    <div class="product_show"><?= $product_new[1] ?></div>
+                    <div class="product_show"><?= $product_new[2] ?></div>
+                    <div class="product_show"><?= $product_new[3] ?></div>
+                    <div class="product_show"><?= $product_new[4] ?></div>
+                    <div class="product_show"><?= $product_new[5] ?></div>
+                    <div class="product_show"><?= $product_new[6] ?></div>
+                    <div class="product_show"><?= $product_new[7] ?></div>
+                    <div class="product_show"><?= $product_new[8] ?></div>
                 </div>
 
                 <div class="slide_show_click">
@@ -137,15 +137,15 @@
                 <label id="lable_product_list">~ SẢN PHẨM BÁN CHẠY ~</label>
 
                 <div class="grid_products">
-                    <div class="product_show"><?= $product[0] ?></div>
-                    <div class="product_show"><?= $product[1] ?></div>
-                    <div class="product_show"><?= $product[2] ?></div>
-                    <div class="product_show"><?= $product[3] ?></div>
-                    <div class="product_show"><?= $product[4] ?></div>
-                    <div class="product_show"><?= $product[5] ?></div>
-                    <div class="product_show"><?= $product[6] ?></div>
-                    <div class="product_show"><?= $product[7] ?></div>
-                    <div class="product_show"><?= $product[8] ?></div>
+                    <div class="product_show"><?= $product_hot[0] ?></div>
+                    <div class="product_show"><?= $product_hot[1] ?></div>
+                    <div class="product_show"><?= $product_hot[2] ?></div>
+                    <div class="product_show"><?= $product_hot[3] ?></div>
+                    <div class="product_show"><?= $product_hot[4] ?></div>
+                    <div class="product_show"><?= $product_hot[5] ?></div>
+                    <div class="product_show"><?= $product_hot[6] ?></div>
+                    <div class="product_show"><?= $product_hot[7] ?></div>
+                    <div class="product_show"><?= $product_hot[8] ?></div>
                 </div>
             </div>
 

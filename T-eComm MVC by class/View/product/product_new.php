@@ -109,12 +109,11 @@
 
             </div>
             <div class="show_products">
-                <label id="lable_product_list">~ <?=$line_title?> ~</label>
+                <label id="lable_product_list">~ SẢN PHẨM MỚI ~</label>
                 <div class="grid_products">
-                    <?= $show ?>
+                    <?= $new_products_show ?>
                 </div>
             </div>
-
             <div class="advertise">
                 <label id="lable_product_box">~ GIỎ HÀNG ~</label>
             </div>
