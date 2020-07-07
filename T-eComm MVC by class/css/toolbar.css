@@ -4,9 +4,9 @@
     height: 3vw;
     padding: 0.3vw 0;
     border:solid 0.1vw darkgrey;
-    background-color: #FFFF00;
-    text-align: center;
+    background-color: #303032;
     justify-content: center;
+    font-family: 'Bebas Neue', cursive;
 }
 .home_page{
     width: 10%;
@@ -16,7 +16,9 @@
 }
 
 #icon_homepage,#icon_dropdown,#icon_connect{
-    color: #3B170B;
+    color: white;
+    font-size: 1.1vw;
+
 }
 .product_list{
     width: 13%;
@@ -30,4 +32,9 @@
     padding: 0.3vw 0;
     font-size: 1.7vw;
 }
+#home_page,#label_tool{
+    color: white;
+    font-size: 1.1vw;
+}
+
 

@@ -19,6 +19,7 @@ if (!isset($_GET['router']) && !isset($_POST['router'])) {
                                 $_SESSION['hiUser'] = $hiUser;
                                 $log_in = "none;";
                                 $log_out = "block;";
+                                include('Model/get_product_data.php');
                                 include('View/home_page.php');
                                 break;
                             }
@@ -41,6 +42,7 @@ if (!isset($_GET['router']) && !isset($_POST['router'])) {
                     }
             }
         } else {
+            include('Model/get_product_data.php');
             include('View/home_page.php');
         }
     }

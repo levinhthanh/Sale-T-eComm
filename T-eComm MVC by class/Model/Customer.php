@@ -26,6 +26,12 @@ class Customer
         $this->customer_is_familiar = 'False';
     }
 
+    public static function watch_product_line($view){
+        $get_product = new CRUD_Database;
+        $get_product->connect();
+        $products = $get_product->executeAll("SELECT * FROM $view");
+        return $products;
+    }
     public function register_account()
     {
         $fullname = $this->customer_fullname;

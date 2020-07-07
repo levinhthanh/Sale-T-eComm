@@ -39,7 +39,7 @@
                 </div>
                 <div class="forgotPass">
                     <label style="color: white;">Forgot password?</label>
-                    <a href="" style="color: orange;">Click here</a>
+                    <a href="index.php?router=customer&control=forgot_password" style="color: orange;">Click here</a>
                 </div>
 
                 <br><br><br>

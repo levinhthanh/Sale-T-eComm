@@ -3,6 +3,10 @@
 if (isset($_GET['control'])) {
     $control = $_GET['control'];
     switch ($control) {
+        case 'watch_product': {
+                include('Controller/Control_product.php');
+                break;
+            }
         case 'register': {
                 include('View/customer/register_page.php');
                 break;
@@ -12,11 +16,16 @@ if (isset($_GET['control'])) {
                 $log_in = "block;";
                 $log_out = "none;";
                 session_destroy();
+                include('Model/get_product_data.php');
                 include('View/home_page.php');
                 break;
             }
         case 'change_password': {
                 include('View/customer/change_password.php');
+                break;
+            }
+        case 'forgot_password': {
+                include('View/customer/forgot_password.php');
                 break;
             }
     }
@@ -25,6 +34,10 @@ if (isset($_GET['control'])) {
 if (isset($_POST['control'])) {
     $control = $_POST['control'];
     switch ($control) {
+        case "require_get_password": {
+
+                break;
+            }
         case "change_password_require": {
                 $account = $_SESSION['account'];
                 $changepassword_array = change_password($account, $old_password, $new_password, $confirm_password);

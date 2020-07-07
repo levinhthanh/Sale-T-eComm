@@ -193,6 +193,7 @@
                                         <option value="Orient">Orient</option>
                                         <option value="Movado">Movado</option>
                                         <option value="Police">Police</option>
+                                        <option value="Teintop">Teintop</option>
                                     </select>
                                     <i id="icon_status" class="far fa-hand-pointer"></i>
                                 </td>

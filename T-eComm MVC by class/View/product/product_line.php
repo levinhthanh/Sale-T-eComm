@@ -109,43 +109,9 @@
 
             </div>
             <div class="show_products">
-                <div id="slide_show"><img id="slide_image" src="images/background/slide1.jpg"></div>
-                <label id="lable_product_list">~ SẢN PHẨM MỚI ~</label>
-
+                <label id="lable_product_line">~ <?=$line_title?> ~</label>
                 <div class="grid_products">
-                    <div class="product_show"><?= $product[0] ?></div>
-                    <div class="product_show"><?= $product[1] ?></div>
-                    <div class="product_show"><?= $product[2] ?></div>
-                    <div class="product_show"><?= $product[3] ?></div>
-                    <div class="product_show"><?= $product[4] ?></div>
-                    <div class="product_show"><?= $product[5] ?></div>
-                    <div class="product_show"><?= $product[6] ?></div>
-                    <div class="product_show"><?= $product[7] ?></div>
-                    <div class="product_show"><?= $product[8] ?></div>
-                </div>
-
-                <div class="slide_show_click">
-                    <img class="img_slide" src="images/background/click1.jpg">
-                    <img class="img_slide" src="images/background/click2.jpg">
-                    <img class="img_slide" src="images/background/click3.jpg">
-                    <img class="img_slide" src="images/background/click4.jpg">
-                    <img class="img_slide" src="images/background/click5.jpg">
-
-                    <button class="button_click_slide_left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="button_click_slide_right" onclick="plusDivs(1)">&#10095;</button>
-                </div>
-                <label id="lable_product_list">~ SẢN PHẨM BÁN CHẠY ~</label>
-
-                <div class="grid_products">
-                    <div class="product_show"><?= $product[0] ?></div>
-                    <div class="product_show"><?= $product[1] ?></div>
-                    <div class="product_show"><?= $product[2] ?></div>
-                    <div class="product_show"><?= $product[3] ?></div>
-                    <div class="product_show"><?= $product[4] ?></div>
-                    <div class="product_show"><?= $product[5] ?></div>
-                    <div class="product_show"><?= $product[6] ?></div>
-                    <div class="product_show"><?= $product[7] ?></div>
-                    <div class="product_show"><?= $product[8] ?></div>
+                    <?= $show ?>
                 </div>
             </div>
 
