@@ -19,8 +19,9 @@ function login_process($account, $password)
             $codeUser = $result['account_code'];
             $checkName = new CRUD_Database();
             $checkName->connect();
-            $rowCustomer = $checkName->executeOne("SELECT customer_fullname from customers where Accounts_account_code = '$codeUser' ");
+            $rowCustomer = $checkName->executeOne("SELECT customer_fullname, customer_code from customers where Accounts_account_code = '$codeUser' ");
             $hiUser = "Xin chào, " . $rowCustomer['customer_fullname'];
+            $_SESSION['customer_code'] = $rowCustomer['customer_code'];
             $status_login = "success";
             $arrayResult[] = $status_login;
             $arrayResult[] = $hiUser;

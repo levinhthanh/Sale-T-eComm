@@ -17,6 +17,7 @@ foreach ($products as $key => $value) {
     $product_images[$i] = $value['product_images'];
     $product_image[$i] = explode(",", $product_images[$i]);
     $product_price_sale[$i] = $value['product_price_sale'];
+    $product_price_sale[$i] = number_format($product_price_sale[$i],0,',','.');
     $is_hot[$i] = $value['is_hot'];
     $is_new[$i] = $value['is_new'];
     $product[$i] = " <div class='product_show'><form action='index.php' method='post'>

@@ -3,12 +3,34 @@
 if (isset($_GET['control'])) {
     $control = $_GET['control'];
     switch ($control) {
+        case 'box_finish': {
+                // Xóa dữ liệu giỏ hàng:
+                for ($i = 0; isset($_SESSION["product_code_$i"]); $i++) {
+                    unset($_SESSION["product_code_$i"]);
+                    unset($_SESSION["product_count_$i"]);
+                    unset($_SESSION["product_name_$i"]);
+                    unset($_SESSION["product_price_$i"]);
+                }
+                if (isset($_SESSION["product_code"])) {
+                    unset($_SESSION["product_code"]);
+                }
+                include('Model/get_product_data.php');
+                include('View/home_page.php');
+                break;
+            }
+        case 'show_box': {
+                include('Model/box/box_product.php');
+                include('View/box/box_product.php');
+                break;
+            }
         case 'new_product_list': {
+                include('Model/get_product_data.php');
                 include('Model/product/product_new.php');
                 include('View/product/product_new.php');
                 break;
             }
         case 'hot_product_list': {
+                include('Model/get_product_data.php');
                 include('Model/product/product_hot.php');
                 include('View/product/product_hot.php');
                 break;
@@ -25,6 +47,16 @@ if (isset($_GET['control'])) {
                 $hiUser = "";
                 $log_in = "block;";
                 $log_out = "none;";
+                // Xóa dữ liệu giỏ hàng:
+                for ($i = 0; isset($_SESSION["product_code_$i"]); $i++) {
+                    unset($_SESSION["product_code_$i"]);
+                    unset($_SESSION["product_count_$i"]);
+                    unset($_SESSION["product_name_$i"]);
+                    unset($_SESSION["product_price_$i"]);
+                }
+                if (isset($_SESSION["product_code"])) {
+                    unset($_SESSION["product_code"]);
+                }
                 session_destroy();
                 include('Model/get_product_data.php');
                 include('View/home_page.php');
@@ -44,6 +76,33 @@ if (isset($_GET['control'])) {
 if (isset($_POST['control'])) {
     $control = $_POST['control'];
     switch ($control) {
+        case "box_finish": {
+                include('Model/box/box_finish.php');
+                include('View/box/box_finish.php');
+                break;
+            }
+        case "box_payment": {
+                include('Model/box/box_payment.php');
+                include('View/box/box_payment.php');
+                break;
+            }
+        case "add_to_box": {
+                if (isset($_SESSION['account']) && isset($_SESSION['password'])) {
+                    $product_code = $_POST['product_code'];
+                    $_SESSION['product_code'] = $product_code;
+                    $_SESSION['product_count'] = 1;
+                    $label_empty_display = 'none';
+                    $btn_buy_display = 'block';
+                    include('Model/box/box_product.php');
+                    include('Model/get_product_data.php');
+                    include('View/home_page.php');
+                    break;
+                } else {
+                    $error_login = "";
+                    include('View/login_page.php');
+                    break;
+                }
+            }
         case "require_add_comment": {
                 include('Controller/Control_product.php');
                 break;

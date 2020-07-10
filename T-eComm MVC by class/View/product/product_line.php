@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T - eComm for Watch</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/box_style.css">
     <link rel="stylesheet" href="../css/fontawesome/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -39,31 +40,43 @@
             </form>
             <div class="others" style="display: flex;">
                 <div class="logIn" style="display: <?= $log_in ?>">
-                    <i id="login" class="fas fa-user"></i><br>
+                    <a href="index.php?control=login">
+                        <i id="login" class="fas fa-user"></i>
+                    </a><br>
                     <a href="index.php?control=login">Đăng nhập</a>
                 </div>
                 <div class="logOut" style="display: <?= $log_out ?>">
-                    <i id="logout" class="fas fa-sign-out-alt"></i><br>
+                    <a href="index.php?router=customer&control=logout">
+                        <i id="logout" class="fas fa-sign-out-alt"></i>
+                    </a><br>
                     <a href="index.php?router=customer&control=logout">Đăng xuất</a>
                 </div>
                 <div class="register" style="display: <?= $log_in ?>">
-                    <i id="login" class="fas fa-key"></i><br>
+                    <a href="index.php?router=customer&control=register">
+                        <i id="login" class="fas fa-key"></i>
+                    </a><br>
                     <a href="index.php?router=customer&control=register">Đăng ký</a>
                 </div>
                 <div class="changePass" style="display: <?= $log_out ?>">
-                    <i id="logout" class="fas fa-exchange-alt"></i><br>
+                    <a href="index.php?router=customer&control=change_password">
+                        <i id="logout" class="fas fa-exchange-alt"></i>
+                    </a><br>
                     <a href="index.php?router=customer&control=change_password">Đổi mật khẩu</a>
                 </div>
                 <div class="productsList">
-                    <i id="box" class="fas fa-shopping-cart"></i><br>
-                    <a href="">Giỏ hàng</a>
+                    <a href="index.php?router=customer&control=show_box">
+                        <i id="box" class="fas fa-shopping-cart"></i>
+                    </a><br>
+                    <a href="index.php?router=customer&control=show_box">Giỏ hàng</a>
                 </div>
             </div>
         </div>
 
         <div class="toolbar" style="display: flex;">
             <div class="home_page">
-                <i id="icon_homepage" class="fas fa-home"></i>
+                <a href="index.php">
+                    <i id="icon_homepage" class="fas fa-home"></i>
+                </a>
                 <a id="home_page" href="index.php">TRANG CHỦ</a>
             </div>
             <div class="product_list">
@@ -109,7 +122,7 @@
 
             </div>
             <div class="show_products">
-                <label id="lable_product_list">~ <?=$line_title?> ~</label>
+                <label id="lable_product_list">~ <?= $line_title ?> ~</label>
                 <div class="grid_products">
                     <?= $show ?>
                 </div>
@@ -117,6 +130,15 @@
 
             <div class="advertise">
                 <label id="lable_product_box">~ GIỎ HÀNG ~</label>
+                <div>
+                    <label class="box_product_name" style="display: <?= $label_empty_display ?>;">Giỏ hàng rỗng !</label>
+                    <?= $box_products_show ?>
+                </div>
+                <form action="index.php" method="get">
+                    <input type="hidden" name="router" value="customer">
+                    <input type="hidden" name="control" value="show_box">
+                    <button id="btn_buy" style="display: <?= $btn_buy_display ?>;">MUA HÀNG</button>
+                </form>
             </div>
         </div>
         <div class="footer">

@@ -1,5 +1,6 @@
 <?php
 
+include('Model/get_product_data.php');
 
 if(isset($_POST['product'])){
     $product_code = $_POST['product'];

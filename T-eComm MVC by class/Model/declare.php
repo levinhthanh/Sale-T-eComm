@@ -52,29 +52,29 @@ $password_employee = "";
 $salary_employee = "";
 
 if (isset($_COOKIE['fullname_employee'])) {
-    $fullname_employee = $_COOKIE['fullname_employee'];   
+    $fullname_employee = $_COOKIE['fullname_employee'];
 }
 if (isset($_COOKIE['birthday_employee'])) {
-    $birthday_employee = $_COOKIE['birthday_employee']; 
+    $birthday_employee = $_COOKIE['birthday_employee'];
 }
 if (isset($_COOKIE['address_employee'])) {
-    $address_employee = $_COOKIE['address_employee'];  
+    $address_employee = $_COOKIE['address_employee'];
 }
 if (isset($_COOKIE['phone_employee'])) {
-    $phone_employee = $_COOKIE['phone_employee'];   
+    $phone_employee = $_COOKIE['phone_employee'];
 }
 if (isset($_COOKIE['email_employee'])) {
-    $email_employee = $_COOKIE['email_employee']; 
+    $email_employee = $_COOKIE['email_employee'];
 }
 if (isset($_COOKIE['account_employee'])) {
-    $account_employee = $_COOKIE['account_employee']; 
-}    
+    $account_employee = $_COOKIE['account_employee'];
+}
 if (isset($_COOKIE['password_employee'])) {
     $password_employee = $_COOKIE['password_employee'];
-}  
+}
 if (isset($_COOKIE['salary_employee'])) {
     $salary_employee = $_COOKIE['salary_employee'];
-} 
+}
 
 if (isset($_GET['control']) && $_GET['control'] === 'add_employee') {
     $fullname_status = 'fas fa-pencil-alt';
@@ -109,19 +109,19 @@ $count_product = "";
 $images_product = "";
 
 if (isset($_COOKIE['name_product'])) {
-    $name_product = $_COOKIE['name_product'];   
+    $name_product = $_COOKIE['name_product'];
 }
 if (isset($_COOKIE['price_buy_product'])) {
-    $price_buy_product = $_COOKIE['price_buy_product']; 
+    $price_buy_product = $_COOKIE['price_buy_product'];
 }
 if (isset($_COOKIE['price_sale_product'])) {
-    $price_sale_product = $_COOKIE['price_sale_product'];  
+    $price_sale_product = $_COOKIE['price_sale_product'];
 }
 if (isset($_COOKIE['count_product'])) {
-    $count_product = $_COOKIE['count_product'];   
+    $count_product = $_COOKIE['count_product'];
 }
 if (isset($_COOKIE['images_product'])) {
-    $images_product = $_COOKIE['images_product']; 
+    $images_product = $_COOKIE['images_product'];
 }
 
 
@@ -150,3 +150,5 @@ $product6 = "";
 $product7 = "";
 $product8 = "";
 $product9 = "";
+
+

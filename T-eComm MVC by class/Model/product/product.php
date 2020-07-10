@@ -4,6 +4,7 @@ $product_info = Product::get_product($product_code);
 
 $one_product_name = $product_info['product_name'];
 $one_product_price_sale = $product_info['product_price_sale'];
+$one_product_price_sale = number_format($one_product_price_sale,0,',','.');
 
 // images
 $one_product_images = $product_info['product_images'];
